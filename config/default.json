@@ -1,0 +1,15 @@
+{
+    "elasticsearch" : {
+        "url": "http://localhost:",
+        "port": "9200",
+        "elasticsearchIndices": {
+            "FLICKRPHOTOS" : {
+                "index": "flickrphotos",
+                "type": "FLICKRPHOTOS",
+                 "collectionName": "flickrphotos"
+            }
+        }
+            
+},
+"application_serverport": 3500
+}

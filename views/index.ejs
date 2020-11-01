@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+	*{
+		margin:0px;
+		padding:0px;
+		box-sizing: border-box;
+	
+	}
+	<!--
+       .test{position: absolute; top: 50px; left: 500px; color: white; font-size: x-large}
+      -->
+	body{
+		font-family: sans-serif;
+		padding-top: 150px;
+		background:#000;
+		color: #FFFFFF ;
+	}
+	.main{
+		margin: auto;
+		width: 50%;
+	}
+	.main input,button{
+		width:75%;
+		border:2px solid white;
+		border-right:0px;
+		font-size: 18px;
+		padding:12px;
+		background-color: transparent;
+		color:blue;
+	}
+	.main input:hover{
+		opacity: .8;
+	}
+	.main button{
+		width:25%;
+		background-color: #eee;
+		color:blueviolet;
+		transition: all 0.3s;
+		float: right;
+		border-left:0px;
+	}
+	.main button:hover{
+		opacity: .8;
+	}
+</style>
+</head>
+<body>
+	
+	<DIV class=test>
+		Moteur de recherche ElasticSearch
+		</DIV>
+	
+	<div class="main">
+        <form action='/' method='post'>
+		<input type="text" name="query" placeholder="Type to Search..">
+		<button type="submit">Search</button> 
+		
+		<div class="row">
+			<% if(typeof items != 'undefined') { %>
+			<% for(var i=0; i < items.length; i++) { %>
+			<img src=<%= "https://farm" + items[i]._source["flickr_farm"] + ".staticflickr.com/" + items[i]._source.flickr_server + "/" + items[i]._source.id + "_" + items[i]._source.flickr_secret + ".jpg" %> class="img-thumbnail" alt="Cinque Terre"
+			  style="display:inline-block ; float: left;margin-left: 5px; margin-right: 5px; margin-bottom: 10px; margin-top: 5px ">
+			<% } %>
+			<% } %>
+		</div>
+
+    </form>
+	</div>
+</body>
+</html>
